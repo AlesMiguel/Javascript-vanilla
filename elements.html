@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos</title>
+    <style>
+        input {
+            width: 250px;
+            height: 30px;
+            background-color: #1D1D1D;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>A</h1>
+    <h1>B</h1>
+    <h1>C</h1>
+    <h1>D</h1>
+    <h1>E</h1>
+
+    <p id="texto">adisjaiksaxsanxjosanxjasnsansafbhnoANSDANSFMDCBKSJACNCIBUYCB</p>
+
+    <button class="btn">Entrar</button>
+
+    <script>
+        // querySelector -> Busca um Elemento
+        // querySelectorAll -> Busca todos os Elementos
+        // getElementById -> Busca um Elemento pelo id
+        // getElementsByClassName -> Busca varios Elementos pela class ou className
+        const body = document.querySelector("body")
+        const h1s = document.querySelectorAll("h1")
+
+        const texto = document.querySelector("#texto")
+        const texto2 = document.getElementById("texto")
+
+        const button = document.querySelector(".btn")
+        const button2 = document.getElementsByClassName("btn")
+        
+        // document.createElement -> Cria Elemento
+        const input = document.createElement("input")
+        input.placeholder = "E-mail"
+
+        // appendChild -> Seta outra como filho
+        body.appendChild(input)
+        
+
+
+        // Manipulando
+        texto.textContent = "Mudei o texto"
+        texto.style.color = "#427a35"
+
+        button.style.color = "#FFF"
+        button.style.background = "#0a046d"
+        button.style.border = "none"
+        button.style.outline = "none"
+
+
+        // addEventListener
+        button.addEventListener('mouseover', function() {
+            button.style.backgroundColor = 'lightcoral'; // Muda a cor de fundo
+        });
+
+        button.addEventListener('mouseout', function() {
+            button.style.backgroundColor = 'lightblue'; // Restaura a cor de fundo
+        });
+    </script>
+</body>
+</html>
